@@ -1,0 +1,192 @@
+<div *ngIf="urunListesi">
+  <a id="getAnOffer" href="#" target="_blank"
+  *ngIf="urunListesi.language == 'tr'; else elseBlock"
+    style="background: url(https://esit.com.tr/assets/images/teklifal.png) no-repeat;height: 107px;width: 100px;cursor: pointer;top: 0px;right: 0px;position: fixed;color: rgb(180, 0, 0);font: bold 10pt verdana;padding: 5px;margin-right: 10px;margin-bottom: 10px;z-index: 1;"
+    data-toggle="modal" (click)="openLg()" data-target="#exampleModal"></a>
+    <ng-template #elseBlock>
+      <a id="getAnOffer" href="#" target="_blank"
+    style="background: url(https://esit.com.tr/assets/images/teklifal-en.png) no-repeat;height: 107px;width: 100px;cursor: pointer;top: 0px;right: 0px;position: fixed;color: rgb(180, 0, 0);font: bold 10pt verdana;padding: 5px;margin-right: 10px;margin-bottom: 10px;z-index: 1;"
+    data-toggle="modal" (click)="openLg()" data-target="#exampleModal"></a>
+    </ng-template>
+</div>
+
+
+
+
+  <ng-template #mailForm let-modal>
+    <div class="modal-header popUpTitle">
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <app-mail [inputUrun]="urunListesi"></app-mail>
+  </ng-template>
+
+<section style="padding:0px" id="main-container" class="main-container">
+  <div id="position">
+    <div class="container">
+      <ul>
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active mb-5">
+              <img class=" mx-auto d-block img-fluid" *ngIf="urunListesi?.urun_resim"
+                src="https://esit.com.tr/{{urunListesi.urun_resim | urlreplace}}" alt="First slide">
+              <hr style="border: 7px solid #d2d4de !important;
+    border-top: none !important; height: 0px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="row">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-lg-7">
+                <h1 *ngIf="urunListesi?.urun_adi"><strong>{{urunListesi.urun_adi}}</strong></h1>
+              </div>
+
+              <div class="col-lg-5 pl-md-0">
+                <div *ngFor="let sertifika of sertifikaTur" class="float-left float-lg-right px-2"
+                  style="flex:20% !important; max-width: 20% !important">
+                  <img *ngIf="sertifika?.resim"
+                    src="https://esit.com.tr/assets/images/sertifika_logo/{{sertifika.resim| urlreplace}}"
+                    title="Laboratuvar içi tartımlar">
+
+                </div>
+
+              </div>
+
+              <div class="col-sm-12">
+                <hr style="border: 7px solid #f32321 !important;
+                            border-top: none !important; height: 0px;">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-12 col-lg-12 mb-5">
+        <div class="content-inner-page">
+          <div class="row">
+            <div class="col-md-12 mb-5">
+              <div *ngIf="urun?.aciklama" class="explanation" innerHTML="{{urun.aciklama}}"></div>
+              <div *ngFor="let aksesuar of aksesualarList" class="media-left" style="min-width:100px;">
+                <div *ngIf="aksesuar">
+                  <a>
+                    <img style="float:left;" *ngIf="aksesuar.resim" class="media-object"
+                      src="https://esit.com.tr/assets/images/ozel/{{aksesuar.resim| urlreplace}}" alt="aksesuar">
+                  </a>
+                  <div class="media-body" style="border-left:1px solid #ccc; margin-left:10px;">
+                    <h4 class="media-heading mt-5" style="margin-left:8px;">{{aksesuar.kategori}} {{aksesuar.baslik}}
+                    </h4>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-12 mt-5 mt-md-0">
+
+              <div class="accordion accordion-group accordion-classic" id="construction-accordion">
+                <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        {{"productPage.technicalSpecifications" | translate }}
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                    data-parent="#construction-accordion">
+                    <div *ngIf="urun?.teknik_ozellik" class="card-body teknikOzellik"
+                      [innerHTML]="urun.teknik_ozellik| safe:'html'"></div>
+                  </div>
+                </div>
+                <div class="card" *ngIf="urunGallery[0]?.url">
+                  <div class="card-header p-0 bg-transparent" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        {{"general.gallery" | translate}}
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                    data-parent="#construction-accordion">
+                    <div class="container mt-5" style="width:50%;">
+                      <div class="carousel-container position-relative row">
+
+                        <!-- Sorry! Lightbox doesn't work - yet. -->
+
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active" data-slide-number="0">
+                              <img src="https://esit.com.tr/{{urunGallery[0].url | urlreplace}}" class="d-block w-100"
+                                alt="..." data-remote="https://source.unsplash.com/Pn6iimgM-wo/" data-type="image"
+                                data-toggle="lightbox" data-gallery="example-gallery">
+                            </div>
+                            <div *ngFor="let urunPhoto of urunGallery let i = index" class="carousel-item"
+                              [attr.data-slide-number]="i+1">
+                              <img src="https://esit.com.tr/{{urunPhoto.url | urlreplace}}" class="d-block w-100"
+                                alt="..." data-remote="https://source.unsplash.com/tXqVe7oO-go/" data-type="image"
+                                data-toggle="lightbox" data-gallery="example-gallery">
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Carousel Navigation -->
+                        <div id="carousel-thumbs" class="carousel slide" data-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <div class="row mx-0">
+                                <div *ngFor="let urunPhoto of urunGallery let i = index" class="carousel-item"
+                                  id="carousel-selector-0" class="thumb col-4 col-sm-2 px-1 py-2 selected"
+                                  data-target="#myCarousel" [attr.data-slide-to]="i+1">
+                                  <img src="https://esit.com.tr/{{urunPhoto.url |urlreplace}}" class="img-fluid"
+                                    alt="...">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a class="carousel-control-prev" href="#carousel-thumbs" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carousel-thumbs" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+
+                      </div> <!-- /row -->
+                    </div> <!-- /container -->
+                  </div>
+                </div>
+              </div>
+              <!--/ Accordion end -->
+            </div>
+          </div>
+          <!--2nd row end -->
+        </div><!-- Content inner end -->
+      </div><!-- Content Col end -->
+
+
+    </div><!-- Main row end -->
+  </div><!-- Conatiner end -->
+</section><!-- Main container end -->

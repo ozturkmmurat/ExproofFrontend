@@ -1,0 +1,78 @@
+{
+    "general":{
+        "send":"Gönder",
+        "error":"Hata",
+        "doNotLeaveBlankSpace":"Boş alan bırakmayınız",
+        "giveOffer":"Teklif Ver",
+        "formMissing":"Formunuz Eksik",
+        "attention":"Dikkat",
+        "validationError":"Doğrulama hatası",
+        "calculateUnsuccess":"Toplama işlemi başarısız",
+        "gallery":"GALERİ"
+    },
+
+    "navbar":{
+        "home":"ANASAYFA",
+        "ourProducts":"ÜRÜNLERİMİZ",
+        "productCategories":"ÜRÜN KATEGORİLERİ",
+        "certificates":"SERTİFİKALAR"
+    },
+
+    "home":{
+        "exTitle":"EX KALİTE UYGUNLUK BELGESİ",
+        "homeContact":"EXPROOF ÜRÜNLERİ İÇİN BİZİMLE İLETİŞİME GEÇİN",
+        "getaQoute":"TEKLİF AL",
+        "exDescription1":"Patlayıcı ortam ve/veya potansiyel patlayıcı ortamlarda kullanılan donanımlar, koruyucu sistemler ve bunların bileşenlerinin Türk Standardlan ve uluslararası standardlar veya diğer ülkelerin Standardları dikkate alınarak Turk Standardlanı Enstitusu tarafından kabul edilen teknik özelliklere uygunluğunu belirten ve akdedilen sözleşme ile TSE-EX markası kullanma hakkı veren, firma adına düzenlenen ve üzerlerinde TSE-EX markası kullanılacak malların ticari markası, cinsi, sinifi, tipi ve türünü belirten, geçerlilik süresi bir yıl olan belgedir.",
+        "exDescription2":"EX Kalite Uygunluk Belgesine ilişkin detaylara aşağıdan ulaşabilirsiniz.",
+
+        "exUl1":{
+            "exUlTitle1":"EX KALİTE UYGUNLUK BELGESİNİN YARARLARI",
+            "exLi1":"Maliyette düşüş - ticarette artış.",
+            "exLi2":"Pazara ulaşmada kolaylık",
+            "exLi3":"Tüketici nezdinde güven",
+            "exLi4":"Güvenli ürünün garantisi",
+            "exLi5":"Kamu ve özel sektör ihalelerinde avantaj",
+            "exLi6":"Yasal mevzuata uygunluk çalışmalarında kolaylık sağlar",
+            "exUlTitle2":"EX KALİTE UYGUNLUK BELGESİNİN DEVAMLILIĞI NASIL SAĞLANIR"
+        },
+
+        "exUl2":{
+            "exUlTitle1":"EX KALİTE UYGUNLUK BELGESİNİN DEVAMLILIĞI NASIL SAĞLANIR",
+            "exLi1":"Ara kontrol amacıyla TSE tarafından belirlenen aralıklaral üretim yeri incelemesi yapılarak gerekli görülürürse üretim yerinden ve/veya piyasadan numune alınarak gerekli görülen muayene ve deneyler yapılır.",
+            "exLi2":"Bu işlemlerin sonucunda belgelendirme şartlarından sapma ykosa belgenin geçerliliği devam eder.",
+            "exLi3":"Üretim yerinde kalite kontrol yeteneği ile bunların devamlılığını garanti altına alan bir sistemin tesis edilip edilmediğinin tespiti için üretim yeri incelemesi yapılır.",
+            "exLi4":"İlgili Standardın ve/veya kriterlerin öngördüğü muayene ve deneyler gerçekleştirilir."
+        },
+
+        "exProduct":{
+            "exProductFeatures1":"BİNARY ÇIKIŞ KARTI (1+19 BİT)",
+            "exProductFeatures2":"CAN OPEN HABERLEŞME KARTI",
+            "exProductFeatures3":"DEVİCENET HABERLEŞME KARTI",
+            "exProductFeatures4":"ESRÖLE BAĞLANTI KARTI (DİJİTAL 8 GİRİŞ & 16 ÇIKIŞ)"
+        }
+      
+    },
+
+    "contact":{
+        "productName":"Ürün Adı",
+        "selectProductCategory":"Ürün Kategorisi Seçiniz",
+        "selectProduct":"Ürün Seçiniz",
+        "firstNameLastName":"Ad Soyad",
+        "phoneNumber":"Telefon Numarası",
+        "message":"Mesaj",
+        "additionResult":"Toplama sonucunu aşağıdaki kutuya giriniz."
+    },
+
+    "certificates":{
+        "certificates":"Sertifikalar",
+        "certificatesUpperCase":"SERTİFİKALAR",
+        "qualityCertificateConformity":"Kalite Uygunluk Belgesi",
+        "certificateTitle":"EX-PROOF KALİTE UYGUNLUK BELGESİ",
+        "certificateDescription":"Ex Kalite Uygunluk Belgesi, patlayıcı gaz ortamında kullanılan elektrikli ürünlerin Türk Standartları Enstitüsü tarafından kabul edilen kalite faktör ve değerlerinde uygunluğunu belirleyen bir belgedir. Ex-proof belgesi, ürünün patlayıcı gaz ortamında emniyeti olarak kullanılabileceğini gösterir.",
+        "certificateDescription2":"Belge üzerinde TSE-EX Markası kullanılan ürünlerin ticari markası, cins, sınıfı, tipi ve türü tanımlanınr."
+    },
+
+    "productPage":{
+        "technicalSpecifications":"Teknik Özellikler"
+    }
+}

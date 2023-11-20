@@ -1,0 +1,51 @@
+<form [formGroup]="mailForm">
+    <div class="modal-body">
+        <div class="mb-3">
+            <div class="mb-3"><label for="name">
+                    <h6>{{"general.giveOffer" | translate}}</h6>
+                </label>
+                <div class="form-group">
+                    <div *ngIf="inputUrun != null else elseBlock" >
+                        <input *ngIf="inputUrun.urun_adi != null; else elseBlock" type="text" id="name"
+                        value="{{inputUrun.urun_adi}}" [placeholder]="'contact.productName' | translate" class="form-control" disabled />
+                </div>
+                <ng-template #elseBlock>
+                    <input type="text" id="name" class="form-control" formControlName="productName" [placeholder]="'contact.productName' | translate"  [attr.disabled]="true"/>
+                </ng-template>
+                   
+                    <div *ngIf="inputUrun == null || inputUrun == undefined">
+                        <select  id="changeCategory" class="form-control" formControlName="selectedCategoryId" (ngModelChange)="changeCategoryProduct()">
+                            <option disabled value="null">{{"contact.selectProductCategory" | translate}}</option>
+                            <option *ngFor="let urunKategori of urunKategoriGrup" [ngValue]="urunKategori.id">
+                                {{ urunKategori.grup_adi }}
+                            </option>
+                        </select>
+    
+                          <select *ngIf="urunListesi != null && urunListesi != undefined" id="changeProduct" formControlName="selectedProductName" (ngModelChange)="changeUrun()"  class="form-control">
+                            <option selected disabled  value="null">{{"contact.selectProduct" | translate}}</option>
+                            <option *ngFor="let urun of urunListesi" [ngValue]="urun.urun_adi" selected>
+                              {{ urun.urun_adi}}
+                            </option>
+                          </select>
+                    </div>
+                   
+                    
+                    <input type="text" id="name" formControlName="firstNameLastName" class="form-control"
+                        [placeholder]=" 'contact.firstNameLastName' | translate" />
+                    <input type="text" id="name" formControlName="phoneNumber" class="form-control"
+                        [placeholder]=" 'contact.phoneNumber' | translate" />
+                    <input type="text" id="name" formControlName="email" class="form-control" placeholder="Email" />
+                    <input type="text" id="name" formControlName="mailBody" class="form-control" placeholder="Mesaj" 
+                    [placeholder]=" 'contact.message' | translate"/>
+                    <p style="margin:0px;" class="mt-2">{{randomNumber}} + {{randomNumber2}} = ?</p>
+                    <input type="text" formControlName="calculate" class="form-control"
+                        placeholder=" {{'contact.additionResult' | translate}} ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="sendMail()">Gönder</button>
+    </div>
+</form>

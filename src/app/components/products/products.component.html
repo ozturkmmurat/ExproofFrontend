@@ -1,0 +1,39 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="assets/images/sliders/exproof_cihazlar.jpg" alt="First slide">
+    </div>
+  </div>
+</div>
+  
+  <section id="main-container" class="main-container pb-2">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-lg-4 col-md-6 mb-5"  *ngFor="let urun of urunListesi">
+          <div class="row">
+            <div class="ts-service-box">
+              <div class="ts-service-image-wrapper">
+                <a routerLink="productDetail/{{urun.id}}">
+                  <img loading="lazy" class="w-100 productImage" src="https://esit.com.tr/{{urun.urun_resim | urlreplace}}" alt="service-image">
+                </a>
+              </div>
+              <div class="d-flex">
+                <div class="ts-service-info">
+                    <h3 class="service-box-title"><a href="service-single.html"></a></h3>
+                    <p class="productTitle">{{urun.urun_adi}}</p>
+                    <p>{{urun.baslik}}</p>
+                    <a routerLink="productDetail/{{urun.id}}" class="learn-more d-inline-block detailsText"  aria-label="service-details"><i class="fa fa-caret-right"></i> DETAY</a>
+                </div>
+              </div>
+              <div class="overlay" routerLink="productDetail/{{urun.id}}">
+              </div>
+          </div><!-- Service1 end -->
+          </div>
+         
+         
+        </div><!-- Col 1 end -->
+  
+      </div><!-- Main row end -->
+    </div><!-- Conatiner end -->
+  </section><!-- Main container end -->

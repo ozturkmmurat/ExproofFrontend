@@ -1,0 +1,78 @@
+{
+
+    "language":"en",
+
+    "general":{
+        "send":"Send",
+        "error":"Error",
+        "doNotLeaveBlankSpace":"Do not leave blank space",
+        "giveOffer":"Give Offer",
+        "attention":"Attention",
+        "validationError":"Validation Error",
+        "calculateUnsuccess":"Collecting is incorrect",
+        "gallery":"GALLERY"
+    },
+
+    "navbar":{
+        "home":"HOME",
+        "ourProducts":"OUR PRODUCTS",
+        "productCategories":"PRODUCT CATEGORİES",
+        "certificates":"CERTIFICATES"
+    },
+
+    "home":{
+        "exTitle":"EX QUALITY CERTIFICATE OF CONFORMITY",
+        "homeContact":"PLEASE CONTACT US FOR EX-PROOF PRODUCTS ",
+        "getaQoute":"GET A QOUTE",
+        "exDescription1":"It is the certificate with a validity period of one year, which is issued on behalf of the company and specifies the trademark, model, class and type of the products on which the TSE-EX brand will be used. It specifies the conformity of the equipment, protective systems and their components used in explosive and/or potentially explosive environments within the technical specifications accepted by the Turkish Standards Institute, taking into account the Turkish Standards, international standards or standards of other countries and gives the right to use the TSE-EX brand with the signed contract.",
+        "exDescription2":"You can find the details of the EX Quality Conformity Certificate below.",
+
+        "exUl1":{
+            "exUlTitle1":"BENEFITS OF EX QUALITY CERTIFICATE OF CONFORMITY",
+            "exLi1":"Cost reduction – trade increase.",
+            "exLi2":"Ease of  market access",
+            "exLi3":"Consumer confidence",
+            "exLi4":"Guarantee of safe product",
+            "exLi5":"Advantage in public and private sector tenders",
+            "exLi6":"Provides convenience in compliance with legal regulations"
+        },
+        "exUl2":{
+            "exUlTitle1":"HOW TO ENSURE THE CONTINUITY OF EX QUALITY CERTIFICATE OF CONFORMITY",
+            "exLi1":"Production site inspections are done at intervals determined by TSE, samples are taken from the production site and/or the market if deemed necessary, required inspections and tests are done for secondary control purposes.",
+            "exLi2":"Validity of the certificate continues, if there is no deviation from the certification requirements as a result of the above processes.",
+            "exLi3":"Production site inspection is done to determine whether a system that guarantees quality control capability and their continuity can be established at the production site or not.",
+            "exLi4":"Inspections and tests are performed stipulated by the relevant Standard and/or criteria."
+        },
+
+        "exProduct":{
+            "exProductFeatures1":"BINARY OUTPUT BOARD (1+19 BITS)",
+            "exProductFeatures2":"CAN OPEN COMMUNICATION BOARD",
+            "exProductFeatures3":"DEVICENET COMMUNICATION BOARD",
+            "exProductFeatures4":"ES-RELAY CONNECTION BOARD (DIGITAL 8 INPUT & 16 OUTPUT)"
+        }
+      
+    },
+
+    "contact":{
+        "productName":"Product Name",
+        "selectProductCategory":"Select Product Category",
+        "selectProduct":"Select Product",
+        "firstNameLastName":"Name Surname",
+        "phoneNumber":"Phone Number",
+        "message":"Message",
+        "additionResult":"Enter the sum result"
+    },
+
+    "certificates":{
+        "certificates":"Certificates",
+        "certificatesUpperCase":"CERTIFICATES",
+        "qualityCertificateConformity":"Quality Certificate of Conformity",
+        "certificateTitle":"EX-PROOF QUALITY CERTIFICATE OF CONFORMITY",
+        "certificateDescription":"Ex-Proof Quality Certificate Of Conformity is a document that determines the conformity of electrical products used in explosive gas environment with the quality factors and values accepted by the Turkish Standards Institute. Ex-proof certificate shows that the product can be used safely in explosive gas environment.",
+        "certificateDescription2":"The registered trademark, model, class and type of the products are defined on the document for products, which the TSE-EX Mark is used."
+    },
+
+    "productPage":{
+        "technicalSpecifications":"Technical Specifications"
+    }
+}

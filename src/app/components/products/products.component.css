@@ -1,0 +1,46 @@
+.productRow{
+    border:1px solid #eaeaea;
+    padding:5px
+}
+.productButton{
+    border-top:1px solid #eaeaea;
+    width:100%;
+}
+.product{
+    border:1px solid #eaeaea;
+    padding:2px;
+}
+.productImage{
+    margin-top: 1rem!important;
+}
+.container{
+    padding: 1px;
+}
+
+
+.detailsText{
+    color: #F37021;
+}
+
+.productTitle{
+    color:black;
+    font-weight: bold !important;
+}
+.ts-service-box{
+    border: 0px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .5s ease;
+    background: rgba(0, 0, 0, 4%);
+    transition: width 2s;
+    height: 100%;
+    border: 1px solid #eaeaea;
+  }
+
+
+  

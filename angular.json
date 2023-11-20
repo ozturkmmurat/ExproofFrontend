@@ -20,20 +20,40 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/myjs"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "./node_modules/jquery-colorbox/example1/colorbox.css",
+              "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
+              "./node_modules/slick-carousel/slick/slick.css",
+              "./node_modules/slick-carousel/slick/slick-theme.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/script.js",
+              "./node_modules/@fortawesome/fontawesome-free/js/all.js",
+              "./node_modules/slick-carousel/slick/slick.min.js",
+              "node_modules/slick-animation/slick-animation.min.js",
+              "./node_modules/slick-animation/slick-animation.min.js",
+              "./node_modules/jquery-colorbox/jquery.colorbox-min.js",
+              "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+              "./node_modules/shufflejs/dist/shuffle.min.js",
+              "./src/assets/myjs/thumbnailCarousel.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -97,5 +117,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
